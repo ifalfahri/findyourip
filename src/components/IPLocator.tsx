@@ -62,7 +62,7 @@ export default function IPLocator() {
         setLocationData(data);
         setMapCenter([data.latitude, data.longitude]);
         setMapZoom(13);
-        setVisitorCount(prev => prev + 1);
+        incrementVisitorCount();
       } catch (error) {
         console.error('Error fetching location data:', error);
         setError('Failed to fetch location data. Please try again later.');
@@ -70,6 +70,7 @@ export default function IPLocator() {
         setLoading(false);
       }
   };
+
 
   const lookupDomainIP = async () => {
     try {
@@ -79,6 +80,15 @@ export default function IPLocator() {
     } catch (error) {
       console.error('Error looking up domain IP:', error);
       setDomainIP('Failed to lookup domain IP');
+    }
+  };
+
+  const incrementVisitorCount = async () => {
+    try {
+      const response = await axios.get('https://api.countapi.xyz/hit/findyourip/visits');
+      setVisitorCount(response.data.value);
+    } catch (error) {
+      console.error('Error incrementing visitor count:', error);
     }
   };
 
@@ -94,7 +104,7 @@ export default function IPLocator() {
       <main className="">
         <Card className="w-full max-w-2xl mx-auto">
           <CardHeader>
-            <CardTitle>IP Address Locator</CardTitle>
+            <CardTitle>Find Your IP</CardTitle>
             <CardDescription>View your IP address and location information</CardDescription>
           </CardHeader>
           <CardContent>
