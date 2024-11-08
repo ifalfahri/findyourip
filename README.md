@@ -1,50 +1,15 @@
-# React + TypeScript + Vite
+# Find Your IP 🌍
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive IP address locator and domain IP lookup tool built with React, TypeScript, and Leaflet. This project provides users with their current IP address, location, and the ability to look up IP addresses of domains. It's a simple, fun project for learning about geolocation and IP-based data fetching.
 
-Currently, two official plugins are available:
+## Features ✨
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **IP Address Locator**: Displays the user's IP address, city, region, country, and plots their approximate location on a map.
+- **Domain Lookup**: Allows users to enter a domain name and retrieve its IP address.
+- **Interactive Map**: Visualize locations on a Leaflet map with customizable zoom and markers.
 
-## Expanding the ESLint configuration
+## Built With 🛠
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React** and **TypeScript**: For building reusable UI components and ensuring type safety.
+- **Tailwind CSS** and **shadcn/ui**: For responsive styling and a beautiful, modern UI.
+- **Leaflet**: For mapping and visualizing location data. 
