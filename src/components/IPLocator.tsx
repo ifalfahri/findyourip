@@ -194,7 +194,7 @@ export default function IPLocator() {
           </main>
         </div>
       </div>
-      <footer className="py-4 text-center text-sm text-gray-500">
+      <footer className="py-4 text-center text-sm text-gray-500 bottom-0 w-full absolute">
         <p>{visitorCount} IP addresses have been located</p>
         <p className="mt-2">
           Made with ❤️ 2024 by ifalfahri | 
